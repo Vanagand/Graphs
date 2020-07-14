@@ -40,18 +40,18 @@ class Test(unittest.TestCase):
 
     def test_bft(self):
         bft = [
-            "1\n2\n3\n4\n5\n6\n7\n",
-            "1\n2\n3\n4\n5\n7\n6\n",
-            "1\n2\n3\n4\n6\n7\n5\n",
-            "1\n2\n3\n4\n6\n5\n7\n",
-            "1\n2\n3\n4\n7\n6\n5\n",
-            "1\n2\n3\n4\n7\n5\n6\n",
-            "1\n2\n4\n3\n5\n6\n7\n",
-            "1\n2\n4\n3\n5\n7\n6\n",
-            "1\n2\n4\n3\n6\n7\n5\n",
-            "1\n2\n4\n3\n6\n5\n7\n",
-            "1\n2\n4\n3\n7\n6\n5\n",
-            "1\n2\n4\n3\n7\n5\n6\n"
+            "Visited 1\nVisited 2\nVisited 3\nVisited 4\nVisited 5\nVisited 6\nVisited 7\n",
+            "Visited 1\nVisited 2\nVisited 3\nVisited 4\nVisited 5\nVisited 7\nVisited 6\n",
+            "Visited 1\nVisited 2\nVisited 3\nVisited 4\nVisited 6\nVisited 7\nVisited 5\n",
+            "Visited 1\nVisited 2\nVisited 3\nVisited 4\nVisited 6\nVisited 5\nVisited 7\n",
+            "Visited 1\nVisited 2\nVisited 3\nVisited 4\nVisited 7\nVisited 6\nVisited 5\n",
+            "Visited 1\nVisited 2\nVisited 3\nVisited 4\nVisited 7\nVisited 5\nVisited 6\n",
+            "Visited 1\nVisited 2\nVisited 4\nVisited 3\nVisited 5\nVisited 6\nVisited 7\n",
+            "Visited 1\nVisited 2\nVisited 4\nVisited 3\nVisited 5\nVisited 7\nVisited 6\n",
+            "Visited 1\nVisited 2\nVisited 4\nVisited 3\nVisited 6\nVisited 7\nVisited 5\n",
+            "Visited 1\nVisited 2\nVisited 4\nVisited 3\nVisited 6\nVisited 5\nVisited 7\n",
+            "Visited 1\nVisited 2\nVisited 4\nVisited 3\nVisited 7\nVisited 6\nVisited 5\n",
+            "Visited 1\nVisited 2\nVisited 4\nVisited 3\nVisited 7\nVisited 5\nVisited 6\n"
         ]
 
         stdout_ = sys.stdout
@@ -65,10 +65,10 @@ class Test(unittest.TestCase):
 
     def test_dft(self):
         dft = [
-            "1\n2\n3\n5\n4\n6\n7\n",
-            "1\n2\n3\n5\n4\n7\n6\n",
-            "1\n2\n4\n7\n6\n3\n5\n",
-            "1\n2\n4\n6\n3\n5\n7\n"
+            "Visited 1\nVisited 2\nVisited 3\nVisited 5\nVisited 4\nVisited 6\nVisited 7\n",
+            "Visited 1\nVisited 2\nVisited 3\nVisited 5\nVisited 4\nVisited 7\nVisited 6\n",
+            "Visited 1\nVisited 2\nVisited 4\nVisited 7\nVisited 6\nVisited 3\nVisited 5\n",
+            "Visited 1\nVisited 2\nVisited 4\nVisited 6\nVisited 3\nVisited 5\nVisited 7\n"
         ]
 
         stdout_ = sys.stdout
@@ -82,10 +82,10 @@ class Test(unittest.TestCase):
 
     def test_dft_recursive(self):
         dft = [
-            "1\n2\n3\n5\n4\n6\n7\n",
-            "1\n2\n3\n5\n4\n7\n6\n",
-            "1\n2\n4\n7\n6\n3\n5\n",
-            "1\n2\n4\n6\n3\n5\n7\n"
+            "Visited 1\nVisited 2\nVisited 3\nVisited 5\nVisited 4\nVisited 6\nVisited 7\n",
+            "Visited 1\nVisited 2\nVisited 3\nVisited 5\nVisited 4\nVisited 7\nVisited 6\n",
+            "Visited 1\nVisited 2\nVisited 4\nVisited 7\nVisited 6\nVisited 3\nVisited 5\n",
+            "Visited 1\nVisited 2\nVisited 4\nVisited 6\nVisited 3\nVisited 5\nVisited 7\n"
         ]
 
         stdout_ = sys.stdout
