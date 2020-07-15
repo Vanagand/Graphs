@@ -2,9 +2,9 @@
 Simple graph implementation
 """
 from util import Stack, Queue  # These may come in handy
+from graph import Graph
 
 class Graph:
-
     """Represent a graph as a dictionary of vertices mapping labels to edges."""
     def __init__(self):
         self.vertices = {}
