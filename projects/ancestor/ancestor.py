@@ -61,9 +61,10 @@ def earliest_ancestor(ancestors, starting_node):
             return starting_node
         else:
             queue.enqueue(visited[starting_node])
-    
+
+
 if __name__ == '__main__':
-    graph = Graph()  # Instantiate your graph
+    # graph = Graph()  # Instantiate your graph
     test_ancestors = [(1, 3), (2, 3), (3, 6), (5, 6), (5, 7), (4, 5), (4, 8), (8, 9), (11, 8), (10, 1)]
     test_result = [10, -1, 10, -1, 4, 10, 4, 4, 4, -1, -1]
     
