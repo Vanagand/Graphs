@@ -125,7 +125,7 @@ class SocialGraph:
         queue.enqueue([user_id])
 
         while queue.size() > 0:
-            current_path =queue.dequeue()
+            current_path = queue.dequeue()
             current_vertex = current_path[-1]
             if current_vertex not in visited:
                 visited[current_vertex] = current_path

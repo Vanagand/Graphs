@@ -156,7 +156,7 @@ class Graph:
 
         # Init: push the starting node
         stack.push([starting_vertex])
-
+ 
         # While the stack isn't empty
         while stack:
             current_path = stack.pop()
