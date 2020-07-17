@@ -30,35 +30,31 @@ class Player:
         idStack = Stack()
         idStack.push(starting_vertex.id) # init
 
-        if visited is None: # recursive attempt (NOT IMPLEMENTED)
+        if visited is None: # recursive (NOT IMPLEMENTED)
             visited = set()
-        print(f"\nYou are standing in room {starting_vertex.id} at {starting_vertex.description}\n") #> Flavor
+        print(f"\nYou are standing in room {starting_vertex.id} at {starting_vertex.description}") #> Flavor
 
         while len(visited) < len(room_graph):
             roomStack = Stack() # stack for next rooms
             current_room = idStack.stack[-1]
             visited.add(current_room)
-
-            print(f"You visited room {current_room} ({len(visited)}/{len(room_graph)})  -----  time: {len(traversal_path)}")
-            print(f"Description: {room_graph[current_room]}\n")
+            print(f"You visited room {current_room} ({len(visited)}/{len(room_graph)})  -----  count: {len(traversal_path)}")
+            print(f"Description: {room_graph[current_room]}")
 
             possible_direction = room_graph[current_room][1]
             for direction, room_id in possible_direction.items():
-                if room_id not in visited: # 
+                if room_id not in visited: # visited count
                     roomStack.push(room_id)
-            if roomStack.size() > 0:
+            if roomStack.size() > 0: # going forward
                 current_room = roomStack.stack[0]
                 idStack.push(current_room)
-                print(f"Room Stack: {roomStack.stack}")
-                print(f"Id Stack: {idStack.stack}")
-            else:
+                print(f"(Inner) ----- roomStack: {roomStack.stack} ##### idStack {idStack.stack}\n")
+            else: # going backward
                 current_room = idStack.stack[-2]
-                print(f"Room Stack: {roomStack.stack}")
-                print(f"Id Stack: {idStack.stack}")
-                # print(stack.stack)
+                print(f"(Inner) ----- roomStack: {roomStack.stack} ##### idStack {idStack.stack}\n")
                 idStack.pop()
             for direction, room in possible_direction.items():
                 if room == current_room:
                     traversal_path.append(direction)
-        print(f"You are now standing in room {current_room}\n.")
+        print(f"You are now standing in room {current_room} at count {len(traversal_path)}\n.")
         return traversal_path
